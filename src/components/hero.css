@@ -1,0 +1,134 @@
+/* hero.css - Hero section styles */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+  font-family: 'Manrope', sans-serif;
+}
+
+.hero-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 66%;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  z-index: 10;
+  padding-bottom: 80px;
+}
+
+@media (min-width: 640px) {
+  .hero-overlay {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-overlay {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.hero-title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+  margin-bottom: 1rem;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  font-family: 'Playfair Display', serif;
+  color: #F2572D;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 0 2px 4px rgba(0,0,0,0.8);
+}
+
+@media (min-width: 640px) {
+  .hero-title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-title {
+    font-size: 6rem;
+  }
+}
+
+.hero-description {
+  font-size: 1rem;
+  max-width: 20rem;
+  line-height: 1.625;
+  color: #f3f4f6;
+  padding: 0 1rem;
+  font-family: 'Manrope', sans-serif;
+}
+
+@media (min-width: 640px) {
+  .hero-description {
+    font-size: 1.125rem;
+    max-width: 28rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-description {
+    font-size: 1.25rem;
+    max-width: 32rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-description {
+    font-size: 1.5rem;
+    max-width: 42rem;
+  }
+}
+
+.hero-description .break-sm {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .hero-description .break-sm {
+    display: block;
+  }
+}
+
+.hero-description .block-sm {
+  display: block;
+}
+
+@media (min-width: 640px) {
+  .hero-description .block-sm {
+    display: inline;
+  }
+}

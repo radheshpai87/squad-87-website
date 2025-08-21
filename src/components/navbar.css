@@ -1,0 +1,160 @@
+/* navbar.css - Navigation component styles */
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: white;
+  font-weight: 500;
+}
+
+@media (min-width: 640px) {
+  .navbar {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.navbar-home-link {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.navbar-home-link:hover {
+  color: #fb923c;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.navbar-mobile-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  .navbar-mobile-toggle {
+    display: none;
+  }
+}
+
+.navbar-mobile-line {
+  width: 1.5rem;
+  height: 2px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.navbar-mobile-line.line1-open {
+  transform: rotate(45deg) translateY(6px);
+}
+
+.navbar-mobile-line.line2-open {
+  opacity: 0;
+}
+
+.navbar-mobile-line.line3-open {
+  transform: rotate(-45deg) translateY(-6px);
+}
+
+.navbar-desktop-menu {
+  display: none;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .navbar-desktop-menu {
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar-desktop-menu {
+    gap: 1.5rem;
+  }
+}
+
+.navbar-link {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+  .navbar-link {
+    font-size: 1rem;
+  }
+}
+
+.navbar-link:hover {
+  color: #fb923c;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.navbar-mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 640px) {
+  .navbar-mobile-menu {
+    display: none;
+  }
+}
+
+.navbar-mobile-menu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar-mobile-menu.closed {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.navbar-mobile-menu-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.navbar-mobile-link {
+  padding: 0.75rem 1.5rem;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.navbar-mobile-link:hover {
+  color: #fb923c;
+  background: rgba(255, 255, 255, 0.1);
+}

@@ -1,48 +1,49 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import './navbar.css';
 
 export default function Navbar(){
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return(
-        <nav className="absolute top-0 left-0 right-0 z-20 flex justify-between items-center px-4 sm:px-6 lg:px-8 py-4 text-white font-medium">
-            <Link to="/" className="hover:text-orange-400 transition-colors duration-300 px-3 py-2 rounded-lg hover:bg-white/45 text-lg font-semibold">
+        <nav className="navbar">
+            <Link to="/" className="navbar-home-link">
                 Home
             </Link>
             <button 
-                className="sm:hidden flex flex-col gap-1 p-2"
+                className="navbar-mobile-toggle"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-                <span className={`w-6 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
-                <span className={`w-6 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-                <span className={`w-6 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+                <span className={`navbar-mobile-line ${isMenuOpen ? 'line1-open' : ''}`}></span>
+                <span className={`navbar-mobile-line ${isMenuOpen ? 'line2-open' : ''}`}></span>
+                <span className={`navbar-mobile-line ${isMenuOpen ? 'line3-open' : ''}`}></span>
             </button>
-            <div className="hidden sm:flex gap-4 lg:gap-6">
-                <Link to="/mentors" className="hover:text-orange-400 transition-colors duration-300 px-3 py-1 rounded-lg hover:bg-white/45 text-sm lg:text-base">
+            <div className="navbar-desktop-menu">
+                <Link to="/mentors" className="navbar-link">
                     Mentors
                 </Link>
-                <Link to="/students" className="hover:text-orange-400 transition-colors duration-300 px-3 py-1 rounded-lg hover:bg-white/45 text-sm lg:text-base">
+                <Link to="/students" className="navbar-link">
                     Students
                 </Link>
-                <Link to="/memories" className="hover:text-orange-400 transition-colors duration-300 px-3 py-1 rounded-lg hover:bg-white/45 text-sm lg:text-base">
+                <Link to="/memories" className="navbar-link">
                     Memories
                 </Link>
-                <Link to="/projects" className="hover:text-orange-400 transition-colors duration-300 px-3 py-1 rounded-lg hover:bg-white/45 text-sm lg:text-base">
+                <Link to="/projects" className="navbar-link">
                     Projects
                 </Link>
             </div>
-            <div className={`absolute top-full left-0 right-0 bg-black/10 backdrop-blur-sm sm:hidden transition-all duration-300 ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
-                <div className="flex flex-col py-4">
-                    <Link to="/mentors" className="hover:text-orange-400 transition-colors duration-300 px-6 py-3 hover:bg-white/10" onClick={() => setIsMenuOpen(false)}>
+            <div className={`navbar-mobile-menu ${isMenuOpen ? 'open' : 'closed'}`}>
+                <div className="navbar-mobile-menu-content">
+                    <Link to="/mentors" className="navbar-mobile-link" onClick={() => setIsMenuOpen(false)}>
                         Mentors
                     </Link>
-                    <Link to="/students" className="hover:text-orange-400 transition-colors duration-300 px-6 py-3 hover:bg-white/10" onClick={() => setIsMenuOpen(false)}>
+                    <Link to="/students" className="navbar-mobile-link" onClick={() => setIsMenuOpen(false)}>
                         Students
                     </Link>
-                    <Link to="/memories" className="hover:text-orange-400 transition-colors duration-300 px-6 py-3 hover:bg-white/10" onClick={() => setIsMenuOpen(false)}>
+                    <Link to="/memories" className="navbar-mobile-link" onClick={() => setIsMenuOpen(false)}>
                         Memories
                     </Link>
-                    <Link to="/projects" className="hover:text-orange-400 transition-colors duration-300 px-6 py-3 hover:bg-white/10" onClick={() => setIsMenuOpen(false)}>
+                    <Link to="/projects" className="navbar-mobile-link" onClick={() => setIsMenuOpen(false)}>
                         Projects
                     </Link>
                 </div>

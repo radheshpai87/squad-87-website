@@ -10,20 +10,12 @@ import { studentData as student13 } from './students/student-13.js';
 const createDefaultStudent = (id, name) => ({
     id,
     name,
-    track: "Web Development",
-    level: "Beginner",
-    skills: ["HTML", "CSS", "JavaScript"],
-    bio: "Learning and growing every day",
-    projects: 3,
-    joinDate: "January 2025",
-    favoriteLanguage: "JavaScript",
-    hobbies: ["Coding", "Learning", "Problem Solving"],
+    quote: "Every expert was once a beginner",
     socialLinks: {
-        github: "",
-        linkedin: "",
-        portfolio: ""
-    },
-    quote: "Every expert was once a beginner"
+        github: "https://github.com",
+        linkedin: "https://linkedin.com",
+        portfolio: "#"
+    }
 });
 
 // List of all student names (same as before)

@@ -1,21 +1,14 @@
-// Student 2 - B. Hariharan  
+// Student 2 - B. Hariharan
 // Edit this file to customize your card
+// Only 3 things are needed: name, quote, and socialLinks
 
 export const studentData = {
     id: 2,
     name: "B. Hariharan",
-    track: "Web Development",
-    level: "Intermediate", 
-    skills: ["React", "Node.js", "MongoDB"],
-    bio: "Building scalable web applications",
-    projects: 8,
-    joinDate: "January 2025",
-    favoriteLanguage: "JavaScript",
-    hobbies: ["Reading", "Cricket", "Coding"],
+    quote: "Learning never stops, coding never ends",
     socialLinks: {
-        github: "",
-        linkedin: "",
-        portfolio: ""
-    },
-    quote: "Learning never stops"
+        github: "https://github.com/bhariharan",
+        linkedin: "https://linkedin.com/in/bhariharan",
+        portfolio: "https://bhariharan.dev"
+    }
 };
